@@ -1,0 +1,328 @@
+/* -- RESET (see https://github.com/csswizardry/vanilla/blob/master/css/style.css from @csswizardry -- */
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+	margin:0;
+	padding:0;
+}
+article,aside,details,figcaption,figure,footer,
+header,hgroup,menu,nav,section{
+	display:block;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img,abbr{
+	border:0;
+}
+address,caption,dfn,th,var{
+	font-style:normal;
+	font-weight:normal;
+}
+u{
+	text-decoration:none;
+}
+caption,th{
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+	font-weight:normal;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* -- MY STYLE... IS IDENTICAL TO NONE (@mrqwest) -- */
+
+body {
+	font-family:'helvetica Neue', Arial, sans-serif;
+	color:#666;
+	background-color:rgba(255,255,255,1);
+	}
+	
+header {
+	background-color:rgba(40,102,136,.8);
+	border-bottom:10px solid rgba(0,0,0,.6);
+	padding:2% 0%;
+	width:100%;
+	}
+	
+header a {
+	color:rgba(236,0,140,1);
+	-webkit-transition:ease-in-out all 0.2s;
+	}
+	
+header a:hover, header a:focus {
+	color:rgba(255,255,255,1);}
+
+.container {
+	max-width:540px;
+	margin:0 auto;
+	padding:1em;
+	}
+	
+h1 {
+	color:rgba(255,255,255,.7);
+	text-align:center;
+	text-indent:-9999px;
+	}
+	
+h2 {
+  	font-family: "league-gothic",sans-serif;
+	color:#fff;
+	font-size:2em;
+	text-align:center;
+	}
+	
+h2 sup {
+	font-size:.5em;}
+
+img#branding {
+	max-width:80%;
+	margin:0 auto;
+	display:block;
+	}
+
+#tweetlist, footer {
+	padding-top:20px;
+	list-style:none;
+	width:80%;
+	max-width:540px;
+	margin:0 auto;
+	clear:both;
+	}
+	
+#tweetlist li, footer {
+	padding:3%;
+	border-bottom:2px solid rgba(30,30,30,1); 
+	font-size:.83em;
+	text-shadow:0 0 1px rgba(255,255,255,1);
+	line-height:1.7em;
+	border-top:1px solid rgba(255,255,255,1);
+	}
+	
+.actualtweet a {
+	text-decoration:none;
+	border-bottom:1px dotted rgba(30,30,30,.8);
+	}
+	
+#tweetlist li a:hover, a:focus {
+	border-bottom:1px solid rgba(0,0,0,.6);
+	}
+
+.twitteravatar {
+	float:left;
+	height:48px;
+	width:48px;
+	}
+	
+a .twitterprofile {
+	text-decoration: none;
+	border:0px;
+	position:relative;
+	top:1px;
+	height:12px;
+	width:12px;}
+
+.tweetmeta {
+	height:48px;
+	padding:13px 0px;
+	margin-left: 56px;
+	}
+
+.twitteruser {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight:bold;
+	text-decoration:none;}
+
+.twittertime {
+	font-style:italic;
+	color:rgba(0,0,0,.75);
+	float:right;
+	}
+
+.actualtweet {	
+	display:inline-block;
+	padding:.6em 0em;
+	}
+	
+a {
+	color:rgba(30,30,30,.8);
+	text-decoration:none;
+	border-bottom:1px dotted rgb(30,30,30);
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	}
+
+a:hover {
+	color:rgba(0,0,0,.9);
+	}
+	
+.tweetmeta a {
+	text-decoration:none;
+	border:0px solid #000;
+}
+
+.croydoncreatives {
+	text-align:center;
+	}
+
+p.croydoncreatives a img {
+	width:170px;
+	margin:0 auto;
+	opacity:0.4;
+	text-align:center;
+	padding:15px 0px;
+	border-bottom:none;
+	}
+
+footer a {
+	border-bottom:none;
+	}
+	
+p.croydoncreatives a img:hover {
+	opacity:.8;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	}
+	
+/* -- ATTENDEES PAGE -- */
+
+#lanyrd-attendees {
+	padding-top:20px;
+	width:540px;
+	margin:0 auto;
+	}	
+	
+#lanyrd-attendees li {
+	list-style:none;
+	float:left;
+	margin:8px 9px;
+	padding:0px;
+	}
+	
+#lanyrd-attendees li img {
+	-webkit-border-radius: 25em;
+	-moz-border-radius: 50em;
+	border-radius: 50em;
+	opacity:.8;
+	-webkit-transition:ease-in-out all 0.2s;
+	-moz-transition:ease-in-out all 0.2s;
+	}
+	
+#lanyrd-attendees li img:hover {
+	opacity:1;
+	}
+
+#lanyrd-attendees li a {
+	margin-bottom:-10px;}
+	
+.instagram {
+	width:80%;
+	max-width:540px;
+	margin:0 auto;
+	display:none;
+	text-align:center;
+	}
+	
+body p.contentnav{
+	text-align:center;
+	margin:10px;
+	padding:10px;
+	width:80%;
+	max-width:520px;
+	margin:10px auto;
+	border-top:1px solid #F8EBEA;
+	border-bottom:1px solid #F8EBEA;
+	}
+	
+.contentnav a {
+	font-size:.8em;
+	text-transform:uppercase;
+	text-align:center;
+	width:300px;
+	margin:0px auto;
+	margin:10px;
+	padding:5px;
+	text-decoration:none;
+	}
+	
+.instagramPhoto {
+float:left;
+padding:4px;
+width:119px;
+height:119px;
+margin:4px;
+box-shadow:1px 0 5px rgba(0,0,0,.3);
+
+}
+
+a.more {	
+	float:left;
+	width:119px;
+	margin:4px;
+	box-shadow:1px 0 5px rgba(0,0,0,.3);
+	padding:47px 0px;
+	display:block; 
+	border-bottom:0px solid #fff;
+	background-color:rgba(0,0,0,.3);
+	color:#eee;
+	border:4px solid rgba(243,243,243,1);
+	-webkit-transition:ease-in-out all 0.2s;
+	-moz-transitiion:ease-in-out all 0.2s;}
+	
+a.more:hover {
+	background-color:rgba(0,0,0,.8);}
+	
+@media screen and (max-width:320px) {
+	body {
+		font-size:.9em;
+		background-size: 50%;
+	}
+	
+	
+	.tweetmeta {
+		padding:0;
+		font-size:0.7em;
+	}
+	
+	.actualtweet {
+		position:inherit;
+		padding-top:30px;
+		left:0px;
+	}
+	
+	.twitterintent {
+		display:block;
+	}
+	
+	.twitterintent a {
+		background-color:rgba(30,162,201,.6);
+		color:#fff;
+		padding:5px 8px;
+		border-radius:10px;
+		min-width:22px;
+		font-style:normal;
+	}
+	
+	.timedivide {
+		display:none;
+	}
+	
+	#tweetlist {
+		width:95%;
+	}
+	
+}
