@@ -1,0 +1,23 @@
+/* TEAM */
+	Design / Development: Anthony Killeen
+	Website: mrqwest.co.uk 
+	Contact: hello [at] mrqwest.co.uk
+	Twitter: @mrqwest
+	From: Croydon, UK
+
+	Cache system: Kris Noble
+	Website: simianstudios.co.uk
+	Twitter: @simianstudios
+	From: London, UK
+	
+	Code Optimisation: Mike Streety
+	Website: mikestreety.co.uk
+	Twitter: @mikestreety
+	From: Brighton, UK
+
+/* RESOURCES */
+	Title: How To Get Started With the Twitter API
+	URL: http://thinkvitamin.com/code/how-to-get-started-with-the-twitter-api/
+	
+	Title: PHP Twitter
+	URL: http://emmense.com/php-twitter/
