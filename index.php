@@ -43,7 +43,7 @@
 			
 			  insta_container.instagram({
 			      hash: 'hashtag'
-			    , clientId : 'a9d31235cace4da99afd639d8a30d670'
+			    , clientId : 'YOUR CLIENT ID'
 			    , show : 16
 			    , onComplete : function (photos, data) {
 			      insta_next_url = data.pagination.next_url
