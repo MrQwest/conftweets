@@ -3,8 +3,9 @@
 <html>
 	<head>
 		<!-- grab the hashtag & conf name from config.php -->
-		<title><?=$searchfor?> - Tweets from <?=$conf?></title> 	
-		<script src="tweets/js/jquery.min.js"></script>
+		<title><?=$searchfor?> - Tweets from <?=$conf?></title> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="tweets/js/jquery.min.js"><\/script>')</script>	
 		<script type="text/javascript" src="tweets/js/jquery.instagram.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
@@ -35,47 +36,44 @@
   
   			// START Instagram includes
   
- 				$(document).ready(function() {
-					$(".instagram").instagram('getStreamByTag', {
-						count: 19,
-						tag: 'TAG', // CHANGE THE TAG HERE TO SUIT YOUR USE 
-						callback: function() {
-		
-							$.each($('.instagram img'), function() {
-								var $this = $(this);
-								var largeUrl = $this.data('altImageSizes').standard_resolution.url;
-							
-								$this.click(function() {
-									window.open(largeUrl); 
-								}).mouseover(function() {
-								
-								var html = $this.data('user').username;
-								if ($this.data('caption') != null) {
-									html += ': ' + $(this).data('caption').text;
-								}
-								
-								$this.mousemove(function(e){
-									$caption.css({left: e.pageX, top: e.pageY});
-								});
-				
-								$caption.html(html);
-								$caption.animate({
-									opacity: 1
-									}, {queue: false});
-									}).mouseout(function(){
-									$caption.animate({
-								 	 	opacity: 0
-									}, {queue: false});
-								});
-							});
-				}
-			});
-		});
+			$(function(){
+			  var
+			    insta_container = $(".instagram")
+			  , insta_next_url
 			
-		
+			  insta_container.instagram({
+			      hash: 'hashtag'
+			    , clientId : 'a9d31235cace4da99afd639d8a30d670'
+			    , show : 16
+			    , onComplete : function (photos, data) {
+			      insta_next_url = data.pagination.next_url
+			    }
+			  });
+			
+			  $('button').on('click', function(){
+			    var 
+			      button = $(this)
+			    , text = button.text()
+			
+			    if (button.text() != 'Loading…'){
+			      button.text('Loading…')
+			      insta_container.instagram({
+			          next_url : insta_next_url
+			        , show : 16
+			        , onComplete : function(photos, data) {
+			          insta_next_url = data.pagination.next_url
+			          button.text(text)
+			        }
+			      })
+			    }       
+			  }) 
+			});
 			
 			$(document).ready(function() {
 				$('.instagram-link').click(function() {
+					$('button#moreinstagram').toggle('fast', 'swing', function() {
+						
+					}).css("display", "block");
 					$('.instagram').toggle('fast', 'swing', function() {
 					// Animation complete.
 					});
@@ -105,7 +103,9 @@
 			</div>
 		</header>
 		<p class="contentnav"><a href="#" class="instagram-link">Show Instagram photos</a></p>
-		<div class="instagram"></div><!-- pulls in Instagram photos and puts them in here -->
+		<div class="instagram"></div>
+		<button id="moreinstagram">More</button>
+		<!-- pulls in Instagram photos and puts them in here -->
 		<ul id="tweetlist">
 			<? require('tweets/tweets.php'); ?>
 		</ul>

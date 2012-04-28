@@ -259,15 +259,24 @@ body p.contentnav{
 	text-decoration:none;
 	}
 	
-.instagramPhoto {
+.instagram-image {
 float:left;
 padding:4px;
-width:119px;
-height:119px;
+width:127px;
+height:127px;
 margin:4px;
 box-shadow:1px 0 5px rgba(0,0,0,.3);
 
 }
+
+#moreinstagram {
+	display:none;
+	width:80%;
+	max-width:540px;
+	margin:0 auto;
+	height:3em;
+	font-weight:bold;
+	text-align:center;}
 
 a.more {	
 	float:left;
